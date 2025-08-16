@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<mod description="" displayName="Empire-Details-on-Star-Info" dllsBuild="$SPOREMOD_DLLS_BUILD" hasCustomInstaller="false" installerSystemVersion="1.0.1.2" isExperimental="$SPOREMOD_EXPERIMENTAL" unique="Empire-Details-on-Star-Info">
+<mod description="" displayName="Empire-Details-on-Star-Info" dllsBuild="$SPOREMOD_DLLS_BUILD" githubUrl="https://github.com/Sadicto/Empire-Details-on-Star-Info" hasCustomInstaller="false" installerSystemVersion="1.0.1.2" isExperimental="$SPOREMOD_EXPERIMENTAL" unique="Empire-Details-on-Star-Info" websiteUrl="https://github.com/Sadicto/Empire-Details-on-Star-Info">
   <prerequisite game="GalacticAdventures">Empire-Details-on-Star-Info.package</prerequisite>
 </mod>
