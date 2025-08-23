@@ -1,0 +1,3 @@
+[submodule "src/Empire-Detail-on-Star-Info/Spore-Mod-Utils"]
+	path = src/Empire-Detail-on-Star-Info/Spore-Mod-Utils
+	url = https://github.com/Sadicto/Spore-Mod-Utils
