@@ -1,4 +1,15 @@
 names
-SpaceStarTooltip
 layouts_atlas~	0x40464200
+trait_spg_bard
+trait_spg_scientist
+trait_spg_diplomat
+trait_spg_wanderer
+trait_spg_trader
+trait_spg_ecologist
+SpaceStarTooltip
+trait_spg_zealot
+ConsequenceGraphics
+trait_spg_shaman
+trait_spg_warrior
+trait_spg_knight
 sporemaster
