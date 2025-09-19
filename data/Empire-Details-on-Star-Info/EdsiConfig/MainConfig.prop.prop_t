@@ -1,0 +1,3 @@
+bool colorInEmpireName true
+bool colorInArchetype true
+bool colorInStarName true

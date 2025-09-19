@@ -1,4 +1,5 @@
 names
+EmpireDetailsOnStarTooltip_COPY
 layouts_atlas~	0x40464200
 trait_spg_bard
 trait_spg_scientist
@@ -6,6 +7,7 @@ trait_spg_diplomat
 trait_spg_wanderer
 trait_spg_trader
 trait_spg_ecologist
+EmpireDetailsOnStarTooltip
 SpaceStarTooltip
 trait_spg_zealot
 ConsequenceGraphics
