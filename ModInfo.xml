@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<mod description="" displayName="Empire-Info-on-Star-Tooltip" dllsBuild="$SPOREMOD_DLLS_BUILD" githubUrl="https://github.com/Sadicto/Empire-Info-on-Star-Tooltip" hasCustomInstaller="false" installerSystemVersion="1.0.1.2" isExperimental="$SPOREMOD_EXPERIMENTAL" unique="Empire-Info-on-Star-Tooltip" websiteUrl="https://github.com/Sadicto/Empire-Info-on-Star-Tooltip">
-  <prerequisite game="GalacticAdventures">Empire-Details-on-Star-Info.package</prerequisite>
-  <prerequisite>Empire-Detail-on-Star-Info.dll</prerequisite>
+<mod description="This mod shows the name and archetype of the empire controlling the star in the star tooltip." displayName="Empire-Info-on-Star-Tooltip" dllsBuild="$SPOREMOD_DLLS_BUILD" githubUrl="https://github.com/Sadicto/Empire-Info-on-Star-Tooltip" hasCustomInstaller="false" installerSystemVersion="1.0.1.2" isExperimental="$SPOREMOD_EXPERIMENTAL" unique="Empire-Info-on-Star-Tooltip" websiteUrl="https://github.com/Sadicto/Empire-Info-on-Star-Tooltip">
+	
+	<prerequisite game="GalacticAdventures">Empire-Details-on-Star-Info_ColorInArchetype_Config.package</prerequisite>
+	<prerequisite game="GalacticAdventures">Empire-Details-on-Star-Info_ColorInEmpireName_Config.package</prerequisite>
+	<prerequisite game="GalacticAdventures">Empire-Details-on-Star-Info_ColorInStarName_Config.package</prerequisite>
+	<prerequisite game="GalacticAdventures">Empire-Details-on-Star-Info_NoColorInArchetype_Config.package</prerequisite>
+	<prerequisite game="GalacticAdventures">Empire-Details-on-Star-Info_NoColorInEmpireName_Config.package</prerequisite>
+	<prerequisite game="GalacticAdventures">Empire-Details-on-Star-Info_NoColorInStarName_Config.package</prerequisite>
+
+	<!-- ColorInEmpireNameConfig -->
+	<componentGroup displayName="Archetype Color In Empire Name" unique="Empire-Details-on-Star-Info_ColorInEmpireName_Config">
+		<component game="GalacticAdventures" displayName="Archetype Color Applied in Empire Name" description="The empire name will be colored according to its archetype." unique="Empire-Details-on-Star-Info_YesColorInEmpireName_Config" defaultChecked="true">Empire-Details-on-Star-Info_ColorInEmpireName_Config.package</component>
+		<component game="GalacticAdventures" displayName="Archetype Color Not Applied in Empire Name" description="The empire name will not be colored according to its archetype." unique="Empire-Details-on-Star-Info_NoColorInEmpireName_Config" defaultChecked="false">Empire-Details-on-Star-Info_NoColorInEmpireName_Config.package</component>
+	</componentGroup>
+	<!-- ColorInArchetypeConfig -->
+	<componentGroup displayName="Archetype Color In Archetype Image" unique="Empire-Details-on-Star-Info_ColorInArchetype_Config">
+		<component game="GalacticAdventures" displayName="Archetype Color Applied in Archetype Image" description="The archetype image will be colored according to its archetype." unique="Empire-Details-on-Star-Info_YesColorInArchetype_Config" defaultChecked="true">Empire-Details-on-Star-Info_ColorInArchetype_Config.package</component>
+		<component game="GalacticAdventures" displayName="Archetype Color Not Applied in Archetype Image" description="The archetype image will not be colored according to its archetype." unique="Empire-Details-on-Star-Info_NoColorInArchetype_Config" defaultChecked="false">Empire-Details-on-Star-Info_NoColorInArchetype_Config.package</component>
+	</componentGroup>
+	<!-- ColorInStarNameConfig -->
+	<componentGroup displayName="Archetype Color In Star Name" unique="Empire-Details-on-Star-Info_ColorInStarName_Config">
+		<component game="GalacticAdventures" displayName="Archetype Color Applied in Star Name" description="The star name will be colored according to the empire's archetype." unique="Empire-Details-on-Star-Info_YesColorInStarName_Config" defaultChecked="true">Empire-Details-on-Star-Info_ColorInStarName_Config.package</component>
+		<component game="GalacticAdventures" displayName="Archetype Color Not Applied in Star Name" description="The star name will not be colored according to the empire's archetype." unique="Empire-Details-on-Star-Info_NoColorInStarName_Config" defaultChecked="false">Empire-Details-on-Star-Info_NoColorInStarName_Config.package</component>
+	</componentGroup>
+	
+	<!-- Main -->
+	<prerequisite game="GalacticAdventures">Empire-Details-on-Star-Info.package</prerequisite>
+	<prerequisite>Empire-Details-on-Star-Info.dll</prerequisite>
+	<remove game="GalacticAdventures">Empire-Details-on-Star-Info.package</remove>
+	<remove>Empire-Details-on-Star-Info.dll</remove>
+	<!-- ColorInEmpireNameConfig -->
+	<remove game="GalacticAdventures">Empire-Details-on-Star-Info_ColorInEmpireName_Config.package</remove>
+	<remove game="GalacticAdventures">Empire-Details-on-Star-Info_NoColorInEmpireName_Config.package</remove>
+	<!-- ColorInArchetypeConfig -->
+	<remove game="GalacticAdventures">Empire-Details-on-Star-Info_ColorInArchetype_Config.package</remove>
+	<remove game="GalacticAdventures">Empire-Details-on-Star-Info_NoColorInArchetype_Config.package</remove>
+	<!-- ColorInStarNameConfig -->
+	<remove game="GalacticAdventures">Empire-Details-on-Star-Info_ColorInStarName_Config.package</remove>
+	<remove game="GalacticAdventures">Empire-Details-on-Star-Info_NoColorInStarName_Config.package</remove>
 </mod>

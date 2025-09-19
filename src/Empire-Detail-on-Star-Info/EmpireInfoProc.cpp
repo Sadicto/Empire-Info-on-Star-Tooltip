@@ -14,11 +14,26 @@ EmpireInfoProc::EmpireInfoProc(ResourceKey configKey,
 {
 	currentEmpire = nullptr;
 	this->archetypeHelper = archetypeHelper;
-	PropertyListPtr config;
-	PropManager.GetPropertyList(configKey.instanceID, configKey.groupID, config);
-	App::Property::GetBool(config.get(), 0xC44BCF56, colorInEmpireName);
-	App::Property::GetBool(config.get(), 0xFD5DF708, colorInArchetype);
-	App::Property::GetBool(config.get(), 0xCF3F3562, colorInStarName);
+	PropertyListPtr mainConfig;
+	PropManager.GetPropertyList(configKey.instanceID, configKey.groupID, mainConfig);
+	ResourceKey colorInEmpireNameConfigKey;
+	ResourceKey colorInArchetypeConfigKey;
+	ResourceKey colorInStarNameConfigKey;
+	App::Property::GetKey(mainConfig.get(), 0xCF65ADB9, colorInEmpireNameConfigKey);
+	App::Property::GetKey(mainConfig.get(), 0xA28C2E7F, colorInArchetypeConfigKey);
+	App::Property::GetKey(mainConfig.get(), 0x350B05E5, colorInStarNameConfigKey);
+
+	PropertyListPtr colorInEmpireNameConfig;
+	PropManager.GetPropertyList(colorInEmpireNameConfigKey.instanceID, colorInEmpireNameConfigKey.groupID, colorInEmpireNameConfig);
+	App::Property::GetBool(colorInEmpireNameConfig.get(), 0xC44BCF56, colorInEmpireName);
+
+	PropertyListPtr colorInArchetypeConfig;
+	PropManager.GetPropertyList(colorInArchetypeConfigKey.instanceID, colorInArchetypeConfigKey.groupID, colorInArchetypeConfig);
+	App::Property::GetBool(colorInArchetypeConfig.get(), 0xFD5DF708, colorInArchetype);
+
+	PropertyListPtr colorInStarNameConfig;
+	PropManager.GetPropertyList(colorInStarNameConfigKey.instanceID, colorInStarNameConfigKey.groupID, colorInStarNameConfig);
+	App::Property::GetBool(colorInStarNameConfig.get(), 0xCF3F3562, colorInStarName);
 
 	this->empireNameWindow = empireNameWindow;
 	empireNameWindow->SetVisible(false);
