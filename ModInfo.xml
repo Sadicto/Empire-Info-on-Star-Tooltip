@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<mod description="This mod shows the name and archetype of the empire controlling the star in the star tooltip." displayName="Empire-Info-on-Star-Tooltip" dllsBuild="$SPOREMOD_DLLS_BUILD" githubUrl="https://github.com/Sadicto/Empire-Info-on-Star-Tooltip" hasCustomInstaller="false" installerSystemVersion="1.0.1.2" isExperimental="$SPOREMOD_EXPERIMENTAL" unique="Empire-Info-on-Star-Tooltip" websiteUrl="https://github.com/Sadicto/Empire-Info-on-Star-Tooltip">
+<mod description="This mod shows the name and archetype of the empire controlling the star in the star tooltip." displayName="Empire-Info-on-Star-Tooltip" dllsBuild="$SPOREMOD_DLLS_BUILD" githubUrl="https://github.com/Sadicto/Empire-Info-on-Star-Tooltip" hasCustomInstaller="true" installerSystemVersion="1.0.1.2" isExperimental="$SPOREMOD_EXPERIMENTAL" unique="Empire-Info-on-Star-Tooltip" websiteUrl="https://github.com/Sadicto/Empire-Info-on-Star-Tooltip">
 	
 	<prerequisite game="GalacticAdventures">Empire-Details-on-Star-Info_ColorInArchetype_Config.package</prerequisite>
 	<prerequisite game="GalacticAdventures">Empire-Details-on-Star-Info_ColorInEmpireName_Config.package</prerequisite>
