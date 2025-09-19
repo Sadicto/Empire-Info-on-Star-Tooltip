@@ -2,7 +2,7 @@
 
 Shows who owns a star in the tooltip, you’ll see the empire’s name and archetype when hovering over a star in the galaxy view.  
 
-## Features
+### Features
 
 - Adds the empire name to the star tooltip.  
 - Adds the empire archetype icon to the star tooltip.  
