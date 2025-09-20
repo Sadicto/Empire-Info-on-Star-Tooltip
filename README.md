@@ -13,5 +13,5 @@ Shows who owns a star in the tooltip, you’ll see the empire’s name and arche
 
 ## Comparison
 
-Everything colored by archetype | Nothing colored by archetype  
-:------------------------------:|:----------------:  
+Vanilla | Modded (no archetype color) | Modded (with archetype color)
+:------:|:---------------------------:|:----------------------------:
