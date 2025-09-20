@@ -54,7 +54,11 @@ bool cEmpireInfoStrategy::WriteToXML(Simulator::XmlSerializer*)
 
 void cEmpireInfoStrategy::OnModeExited(uint32_t previousModeID, uint32_t newModeID) {
 	if (previousModeID == GameModeIDs::kGameSpace) {
-		delete layout;
+		if (layout != nullptr) {
+			delete layout;
+			layout = nullptr;
+		}
+
 	}
 }
 

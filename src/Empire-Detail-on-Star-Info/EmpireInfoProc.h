@@ -13,7 +13,7 @@ class EmpireInfoProc
 	, public DefaultRefCounted
 {
 public:
-	static const uint32_t TYPE = id("EmpireInfoProc");
+	static const uint32_t TYPE = id("Empire_Detail_on_Star_Info::EmpireInfoProc");
 	
 	EmpireInfoProc(ResourceKey configKey, 
 		ArchetypeWinProcHelper* archetypeHelper, 

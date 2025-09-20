@@ -68,12 +68,6 @@ member_detour(SpaceGameUi__FillStarTooltipStarInfo__detour, UI::SpaceGameUI, int
 	}
 };
 
-member_detour(SpaceGameUi__capaz__detour, UI::SpaceGameUI, void(UTFWin::UILayout*, int)) {
-	void detoured(UTFWin::UILayout * layout, int a) {
-		original_function(this, layout, a);
-	}
-};
-
 void AttachDetours()
 {
 	SpaceGameUi__FillStarTooltipStarInfo__detour::attach(Address(ModAPI::ChooseAddress(0x0106d8f0, 0x0106cca0)));
