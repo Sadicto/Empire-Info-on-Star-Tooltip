@@ -31,22 +31,6 @@ void* ArchetypeWinProcHelper::Cast(uint32_t type) const
 	return nullptr;
 }
 
-char16_t* ArchetypeWinProcHelper::ArchetypeToString(Archetypes archetype) {
-	switch (archetype) {
-	case Archetypes::kArchetypeWarrior:         return u"Warrior";
-	case Archetypes::kArchetypePlayerWarrior:   return u"Knight"; // Returned when playerKnight is mapped with preservePlayerSubtypes = true
-	case Archetypes::kArchetypeTrader:          return u"Trader";
-	case Archetypes::kArchetypeScientist:       return u"Scientist";
-	case Archetypes::kArchetypeShaman:          return u"Shaman";
-	case Archetypes::kArchetypeBard:            return u"Bard";
-	case Archetypes::kArchetypeZealot:          return u"Zealot";
-	case Archetypes::kArchetypeDiplomat:        return u"Diplomat";
-	case Archetypes::kArchetypeGrob:            return u"Wanderer";  // Returned when playerWanderer is mapped with preservePlayerSubtypes = true
-	case Archetypes::kArchetypeEcologist:       return u"Ecologist";
-	default: return u"";
-	}
-}
-
 bool ArchetypeWinProcHelper::GetArchetypeImagen(ImagePtr& image, Archetypes archetype) {
 	const char16_t* imageName = nullptr;
 
@@ -60,7 +44,6 @@ bool ArchetypeWinProcHelper::GetArchetypeImagen(ImagePtr& image, Archetypes arch
 	case Simulator::Archetypes::kArchetypeEcologist:
 		imageName = u"ConsequenceGraphics!trait_spg_ecologist.png";
 		break;
-	case Simulator::Archetypes::kArchetypePlayerKnight:
 	case Simulator::Archetypes::kArchetypePlayerWarrior:
 		imageName = u"ConsequenceGraphics!trait_spg_knight.png";
 		break;
@@ -76,12 +59,14 @@ bool ArchetypeWinProcHelper::GetArchetypeImagen(ImagePtr& image, Archetypes arch
 	case Simulator::Archetypes::kArchetypeTrader:
 		imageName = u"ConsequenceGraphics!trait_spg_trader.png";
 		break;
-	case Simulator::Archetypes::kArchetypePlayerWanderer:
 	case Simulator::Archetypes::kArchetypeGrob:
 		imageName = u"ConsequenceGraphics!trait_spg_wanderer.png";
 		break;
 	case Simulator::Archetypes::kArchetypeZealot:
 		imageName = u"ConsequenceGraphics!trait_spg_zealot.png";
+		break;
+	case Simulator::Archetypes::kArchetypePlayerTrader: // Grox empire.
+		imageName = u"EdsiConfig!Groxeyecon.png";
 		break;
 	default:
 		return false;
@@ -118,7 +103,8 @@ Color ArchetypeWinProcHelper::GetArchetypeColor(Simulator::Archetypes archetype)
 		return Color(205, 63, 23, 255);   // (0.803, 0.247, 0.09)
 	case Simulator::Archetypes::kArchetypeZealot:
 		return Color(165, 70, 205, 255);  // (0.647, 0.275, 0.804)
-
+	case Simulator::Archetypes::kArchetypePlayerTrader: // Grox empire.
+		return Color(153, 39, 108, 255);
 	default:
 		return Color(255, 255, 255, 255); // fallback to white
 	}

@@ -18,8 +18,6 @@ public:
 	int Release() override;
 	void* Cast(uint32_t type) const override;
 
-	char16_t* ArchetypeToString(Simulator::Archetypes archetype);
-
 	bool GetArchetypeImagen(ImagePtr& image, Simulator::Archetypes archetype);
 
 	Color GetArchetypeColor(Simulator::Archetypes archetype);

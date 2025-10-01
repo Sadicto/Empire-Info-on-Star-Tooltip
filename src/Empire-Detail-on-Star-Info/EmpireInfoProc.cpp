@@ -90,7 +90,7 @@ void EmpireInfoProc::HandleStarHover(Simulator::cStarRecord* star) {
 	cEmpire* empire = StarManager.GetEmpire(star->mEmpireID);
 	if (planetInfoWindow->IsVisible() &&
 		star->GetTechLevel() == TechLevel::Empire &&
-		EmpireUtils::ValidNpcEmpire(empire, true, false, true) &&
+		EmpireUtils::ValidNpcEmpire(empire, true, true, true) &&
 		DiplomacyUtils::PlayerContactedEmpire(empire)) {
 		if (currentEmpire != empire) {
 			currentEmpire = empire;
