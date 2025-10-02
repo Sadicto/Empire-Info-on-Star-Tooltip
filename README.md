@@ -16,3 +16,7 @@ Shows who owns a star in the tooltip, you’ll see the empire’s name and arche
 Vanilla | Modded (no archetype color) | Modded (with archetype color)
 :------:|:---------------------------:|:----------------------------:
 | ![VanillaTooltip](images/VanillaTooltip.png) | ![ModdedTooltipNoColors](images/ModdedTooltipNoColors.png) | ![ModdedTooltipColors](images/ModdedTooltipColors.png)
+
+## Credits
+
+- John Kloorbik: Created the Grox archetype icon.
