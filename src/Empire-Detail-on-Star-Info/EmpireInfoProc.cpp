@@ -23,6 +23,9 @@ EmpireInfoProc::EmpireInfoProc(ResourceKey configKey,
 	App::Property::GetKey(mainConfig.get(), 0xA28C2E7F, colorInArchetypeConfigKey);
 	App::Property::GetKey(mainConfig.get(), 0x350B05E5, colorInStarNameConfigKey);
 
+	App::Property::GetUInt32(mainConfig.get(), 0xE3F0CBD2, maxAIEmpireNameLength);
+	App::Property::GetUInt32(mainConfig.get(), 0xF504294F, maxPlayerEmpireNameLength);
+
 	PropertyListPtr colorInEmpireNameConfig;
 	PropManager.GetPropertyList(colorInEmpireNameConfigKey.instanceID, colorInEmpireNameConfigKey.groupID, colorInEmpireNameConfig);
 	App::Property::GetBool(colorInEmpireNameConfig.get(), 0xC44BCF56, colorInEmpireName);
@@ -94,13 +97,18 @@ void EmpireInfoProc::HandleStarHover(Simulator::cStarRecord* star) {
 		DiplomacyUtils::PlayerContactedEmpire(empire)) {
 		if (currentEmpire != empire) {
 			currentEmpire = empire;
+			cEmpire* playerEmpire = GetPlayerEmpire();
 			eastl::string16 empireName = empire->mEmpireName;
 			Archetypes empireArchetype = SporeModUtils::ArchetypeUtils::GetBaseArchetype(empire->mArchetype, true);
 			Math::Color archetypeColor = archetypeHelper->GetArchetypeColor(empireArchetype);
 
 			// If the empire name is too long cut the name at 14 characters and add a '.' in the end.
-			if (empireName.length() > 15) {
-				empireName.resize(14);
+			if (empire != playerEmpire && empireName.length() > maxAIEmpireNameLength) {
+				empireName.resize(maxAIEmpireNameLength - 1);
+				empireName.push_back('.');
+			}
+			else if (empire == playerEmpire && empireName.length() > maxPlayerEmpireNameLength) {
+				empireName.resize(maxPlayerEmpireNameLength - 1);
 				empireName.push_back('.');
 			}
 			empireNameWindow->SetCaption(empireName.c_str());

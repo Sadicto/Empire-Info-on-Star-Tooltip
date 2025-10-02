@@ -2,16 +2,23 @@ names
 EmpireDetailsOnStarTooltip_COPY
 layouts_atlas~	0x40464200
 trait_spg_bard
+Groxeyecon
 trait_spg_scientist
+ColorInArchetypeNameConfig
 trait_spg_diplomat
 trait_spg_wanderer
 trait_spg_trader
 trait_spg_ecologist
+EdsiConfig
 EmpireDetailsOnStarTooltip
 SpaceStarTooltip
 trait_spg_zealot
+ColorInStarNameConfig
 ConsequenceGraphics
 trait_spg_shaman
+auto_EdsiConfig_MainConfig
 trait_spg_warrior
 trait_spg_knight
+ColorInEmpireNameConfig
 sporemaster
+MainConfig

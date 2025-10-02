@@ -1,3 +1,6 @@
 key colorInEmpireNameConfigKey EdsiConfig!ColorInEmpireNameConfig.prop
 key colorInArchetypeConfigKey EdsiConfig!ColorInArchetypeNameConfig.prop
 key colorInStarNameConfigKey EdsiConfig!ColorInStarNameConfig.prop
+
+uint32 maxAIEmpireNameLength 15
+uint32 maxPlayerEmpireNameLength 23

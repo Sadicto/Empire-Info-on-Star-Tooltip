@@ -42,6 +42,9 @@ public:
 	bool colorInArchetype;
 	bool colorInStarName;
 
+	uint32_t maxAIEmpireNameLength;
+	uint32_t maxPlayerEmpireNameLength;
+
 	UTFWin::IWindow* empireNameWindow;
 	UTFWin::IWindow* archetypeImageWindow;
 	UTFWin::IWindow* starNameWindow;
